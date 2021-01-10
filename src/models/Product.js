@@ -24,7 +24,7 @@ const ProductSchema = new mongoose.Schema({
 
 
 ProductSchema.virtual('image_url').get(function (){
-  return `http://localhost:3333/files/${this.image}`
+  return `https://sango-api.herokuapp.com/${this.image}`
 });
 
 module.exports = mongoose.model("Product", ProductSchema);
