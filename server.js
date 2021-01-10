@@ -21,20 +21,6 @@ app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, 'uploads')))
 app.use(routes);
 
-// // req.query = Acessar query params (para filtros)
-// app.post('/users', (req, res) => {
-//     return res.json({idade: req.query.idade});
-// });
-
-// app.put('/users/:id', (req, res) => {
-// // req.params = Acessar route params (para edição e exclusão)
-//     return res.json({id: req.params.id});
-// });
-
-// app.post('/users', (req, res) => {
-
-// // req.body = Acessar corpo das requisições (criação e edição)
-//     return res.json(req.body);
-// });
-
-server.listen(3333);
+app.listen(process.env.PORT || 3333, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
