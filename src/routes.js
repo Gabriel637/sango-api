@@ -1,6 +1,6 @@
 const express = require("express");
 const multer = require("multer");
-const uploadConfig = require("../config/upload");
+const uploadConfig = require("./config/upload");
 
 const ProductController = require("./controllers/ProductController");
 const SessionController = require("./controllers/SessionController");
